@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+            <form id="todoForm">
+                <input id="todoInput">
+                <button type="button" onclick="todolist()">envoyer</button>
+            </form>
+            <ol id="todolist">
+
+            </ol>
+            <script>
+                function todolist(){
+                    var item = document.getElementById("todoInput").value
+                    var text = document.createTextNode(item)
+                    var newItem = document.createElement("li")
+                    newItem.appendChild(text)
+                    document.getElementById("todolist").appendChild(newItem)
+                }
+            </script>
+        </body>
+        </html>
